@@ -1,0 +1,13 @@
+fo=open("Odd.txt", "w")
+with open("inp.txt", "r") as fi:
+    for stri in fi:
+        if len(stri)>0:
+            arr=stri.split()
+            tmp=""
+            for s in arr:
+                if int(s)%2 != 0:
+                    tmp+=s+" "
+            fo.write(tmp+"\n")
+        else:
+            fo.write("\n")
+fo.close()
